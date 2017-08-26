@@ -36,6 +36,7 @@ process.on('unhandledRejection', reason => {
   console.log('Unhandled promise rejection: ' + reason)
 })
 
+app.use(serve(__dirname + '../client/build', { maxage, defer: false }))
 routes(app, config)
 app.listen(config.app.port)
 console.log(`Server listening on port: ${config.app.port} in ${config.env} mode`)
