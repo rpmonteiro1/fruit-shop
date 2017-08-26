@@ -5,7 +5,9 @@ const config = {
   env,
   currency:  'CHF',
   jwtKey:    'ricsfsjwt',
-  apiServer: env === 'production' ? 'https://amz-fba-sv.herokuapp.com/api' : `${localServer}/api`
+  apiServer: env === 'production'
+    ? 'https://rics-fruit-shop.herokuapp.com/api'
+    : `${localServer}/api`
 }
 
 export default config

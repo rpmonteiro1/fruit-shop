@@ -7,12 +7,16 @@ const logger       = require('koa-morgan')
 const helmet       = require('koa-helmet')
 const errorHandler = require('koa-error')
 const bodyparser   = require('koa-bodyparser')
+const serve        = require('koa-static')
 const cors         = require('kcors')
 const compress     = require('koa-compress')
 const enforceHttps = require('koa-sslify')
 const config       = require('./config/settings')
 const routes       = require('./config/routes')
 const database     = require('./config/database')
+const env          = process.env.NODE_ENV
+const port         = process.env.PORT || 8080
+const maxage       = env === 'production' ? 24 * 60 * 60 * 1000 : 0
 
 
 database.then(db => app.context.db = db)
@@ -38,5 +42,5 @@ process.on('unhandledRejection', reason => {
 
 app.use(serve(__dirname + '../client/build', { maxage, defer: false }))
 routes(app, config)
-app.listen(config.app.port)
-console.log(`Server listening on port: ${config.app.port} in ${config.env} mode`)
+app.listen(port)
+console.log(`Server listening on port: ${port} in ${config.env} mode`)
