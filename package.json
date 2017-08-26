@@ -6,8 +6,8 @@
   "scripts": {
     "start": "",
     "heroku-prebuild": "",
-    "heroku-postbuild": "concurrently \"cd client && yarn\" \"cd server && yarn\"",
-    "deploy": "cd client && yarn build"
+    "heroku-postbuild": "concurrently \"cd client && yarn\" \"cd server && yarn\" && cd client && yarn build",
+    "deploy": ""
   },
   "dependencies": {
     "concurrently": "^3.5.0"
