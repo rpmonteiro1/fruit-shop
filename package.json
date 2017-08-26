@@ -11,5 +11,9 @@
   },
   "dependencies": {
     "concurrently": "^3.5.0"
+  },
+  "engines": {
+    "node": "8.1.2",
+    "yarn": "0.24.5"
   }
 }
