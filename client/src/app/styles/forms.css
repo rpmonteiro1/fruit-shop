@@ -1,0 +1,119 @@
+.form {
+  display: block;
+  margin: 0;
+  padding: var(--form-padding);
+  background-color: color(#FFF a(0.1));
+}
+
+fieldset,
+.fieldset {
+  /*background-color: color(#FFF a(0.1));*/
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.fieldset + .fieldset {
+  margin-top: var(--form-padding);
+}
+
+.form-row {
+  margin: 0;
+  padding: 0;
+  /*background-color: color(#FFF a(0.1));*/
+}
+
+.form-row + .form-row {
+  margin-top: var(--form-spacing);
+}
+
+.form-title {
+  margin: 0;
+  padding: 0 0 var(--form-spacing) 0;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-family: inherit;
+}
+
+.form-error {
+  margin: 0;
+  margin-bottom: var(--form-spacing);
+  padding: 0;
+  color: var(--red-color);
+  font-weight: 500;
+}
+
+
+input,
+select,
+textarea,
+fieldset {
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: var(--form-field-font-size);
+  font-family: var(--form-field-font-family);
+}
+
+label {
+  vertical-align: middle;
+}
+
+input {
+  height: var(--form-field-height);
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+  outline: none;
+  border: 1px solid var(--divider-color);
+  border-radius: var(--form-field-rounding);
+  background-color: var(--form-field-bg-color);
+  color: var(--form-field-color);
+  vertical-align: middle;
+  font-family: var(--sans-serif-font);
+  -webkit-appearance: none;
+}
+
+
+input:hover {
+  background-color: var(--field-active-color);
+}
+
+input:active,
+input:focus {
+  /*box-shadow: 0 0 0 1px color(var(--highlight-color) a(0.9));*/
+  border: 1px solid var(--focus-color);
+  background-color: var(--field-active-color);
+  color: color(var(--form-field-color) l(0%));
+}
+
+input[type=hidden] {
+  display: none;
+}
+
+select {
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+  line-height: 1.75;
+}
+
+select:not([multiple]) {
+  height: var(--form-field-height);
+  vertical-align: middle;
+}
+
+textarea {
+  padding: var(--form-field-padding-y) var(--form-field-padding-x);
+  line-height: 1.75;
+}
+
+.input.block {
+  width: 100%;
+}
+
+
+/* http://stackoverflow.com/questions/2781549/removing-input-background-colour-for-chrome-autocomplete */
+input:-webkit-autofill {
+  box-shadow: 0 0 0 1000px white inset;
+
+  -webkit-text-fill-color: var(--form-field-color) !important;
+}

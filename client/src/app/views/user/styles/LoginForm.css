@@ -1,0 +1,59 @@
+.login-form {
+  flex: none;
+  width: 250px;
+  border-radius: 2px;
+  background-color: rgba(115, 56, 139, 0.45);
+  box-shadow: 0 4px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.login-form label {
+  display: none;
+}
+
+.login-form input {
+  border-color: #FFF;
+}
+
+.login-button {
+  font-family: var(--sans-serif-font);
+}
+
+.login-form fieldset + fieldset {
+  text-align: center;
+}
+
+
+/* component transitions */
+.logintrans-appear {
+  opacity: 0.01;
+  transition-delay: 0.4s;
+  transition-duration: 0.4s;
+  transform: translate3d(0, 0, -100vh);
+}
+
+.logintrans-appear.logintrans-appear-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+
+.logintrans-enter {
+  opacity: 0.01;
+  transform: translate3d(0, 0, -100vh);
+}
+
+.logintrans-enter.logintrans-enter-active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: translate3d(0, 0, 0);
+}
+
+
+.logintrans-leave {
+  opacity: 1;
+}
+
+.logintrans-leave.logintrans-leave-active {
+  opacity: 0.01;
+  transition-duration: 1s;
+}

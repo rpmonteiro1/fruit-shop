@@ -1,0 +1,51 @@
+.flash {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 200px);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 45px;
+  padding: 0;
+  border: 2px solid #575757;
+  background-color: #565656;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 45px;
+  opacity: 0;
+  transition: transform, opacity;
+  transition-delay: 0.5s, 0s;
+  transition-duration: 0.5s;
+  transform: translate3d(0, -120%, 0);
+}
+
+.flash-success {
+  color: #FFD800;
+}
+
+.flash-error {
+  background-color: #A72222;
+  color: white;
+}
+
+.flash.active {
+  z-index: 190;
+  opacity: 1;
+  transition-delay: 0s, 0.5s;
+  transition-duration: 0.3s;
+  transform: translate3d(0, 0, 0);
+}
+
+.flash-close-icon {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+}
+
+.flash-close-icon:hover {
+  color: #C7A800;
+}

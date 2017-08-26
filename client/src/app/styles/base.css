@@ -1,0 +1,48 @@
+html {
+  overflow: hidden;
+  font-size: var(--font-size-base);
+  -webkit-app-region: drag;
+}
+
+body {
+  position: fixed;
+  overflow: hidden;
+  background-color: var(--border-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  font-family: var(--sans-serif-font);
+  opacity: 1;
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-app-region: drag;
+}
+
+body a,
+body button {
+  -webkit-app-region: no-drag;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color-hover);
+}
+
+a:active, {
+  color: var(--primary-color-active);
+}

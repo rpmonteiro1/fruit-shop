@@ -1,0 +1,64 @@
+.shop-row {
+  max-width: 45vw;
+}
+
+@media (max-width: 1000px) {
+  .shop-row {
+    max-width: 85vw;
+  }
+
+  .product-row img {
+    max-height: 100px;
+    width: 100px;
+    height: auto;
+  }
+}
+
+.shop-row:not(:first-child) {
+  margin-top: 3rem;
+}
+
+.product-row {
+  display: flex;
+}
+
+.product-row .details {
+  padding-left: 1rem;
+}
+
+.sweetness {
+  padding: 1rem 0;
+  font-weight: 500;
+  font-size: var(--font-size-smaller);
+}
+
+.price.strikethrough {
+  position: relative;
+  width: auto;
+  color: var(--secondary-color);
+  text-decoration: line-through var(--red);
+  font-size: smaller;
+}
+
+.special-offer,
+.discounted-price {
+  color: var(--light-red);
+  font-weight: 500;
+}
+
+.discount-info {
+  color: var(--light-red);
+  font-size: smaller;
+}
+
+.product-row img {
+  max-height: var(--image-width);
+  width: var(--image-width);
+  height: auto;
+}
+
+.product-title {
+  letter-spacing: -1px;
+  font-weight: 500;
+  font-size: var(--font-size-large);
+}

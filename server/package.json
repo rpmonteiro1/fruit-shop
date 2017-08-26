@@ -1,0 +1,54 @@
+{
+  "name": "amz-fba-sv",
+  "version": "2.0.0",
+  "main": "index.js",
+  "repository": "https://rpmonteiro@github.com/rpmonteiro/shopping-cart-r3pi.git",
+  "author": "rpmonteiro <ricpmonteiro@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "clear && nodemon --inspect --debug server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "2.4.3",
+    "dotenv": "4.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-react": "^7.3.0",
+    "jsonwebtoken": "7.4.1",
+    "kcors": "2.2.1",
+    "koa": "2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "2.0.0",
+    "koa-error": "3.0.1",
+    "koa-helmet": "3.2.0",
+    "koa-jwt": "3.2.2",
+    "koa-morgan": "1.0.1",
+    "koa-response-time": "2.0.0",
+    "koa-router": "7.2.1",
+    "koa-sslify": "2.1.2",
+    "koa-static": "3.0.0",
+    "koa-unless": "1.0.7",
+    "massive": "^3.1.0",
+    "pg": "^6.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-polyfill": "6.23.0",
+    "babel-preset-latest": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "db-migrate": "0.10.0-beta.20",
+    "db-migrate-pg": "0.1.12",
+    "eslint": "4.1.0",
+    "eslint-plugin-security": "1.4.0",
+    "expect": "1.20.2",
+    "jsonfile": "3.0.0",
+    "mocha": "3.4.2",
+    "nodemon": "^1.11.0",
+    "prompt": "^1.0.0",
+    "supertest": "3.0.0"
+  },
+  "engines": {
+    "node": "8.1.2",
+    "yarn": "0.24.5"
+  }
+}
