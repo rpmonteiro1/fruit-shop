@@ -7,14 +7,14 @@ const logger       = require('koa-morgan')
 const helmet       = require('koa-helmet')
 const errorHandler = require('koa-error')
 const bodyparser   = require('koa-bodyparser')
-const serve        = require('koa-static')
+// const serve        = require('koa-static')
 const cors         = require('kcors')
 const compress     = require('koa-compress')
 const enforceHttps = require('koa-sslify')
 const config       = require('./config/settings')
 const routes       = require('./config/routes')
-const publicRoutes = require('./config/public-routes')
 const database     = require('./config/database')
+const serve        = require('koa-static-server')
 
 const env          = process.env.NODE_ENV
 const port         = process.env.PORT || 8080
@@ -42,8 +42,9 @@ process.on('unhandledRejection', reason => {
   console.log('Unhandled promise rejection: ' + reason)
 })
 
-app.use(serve('../client/build', { maxage, defer: false }))
-publicRoutes(app)
+// publicRoutes(app)
+// app.use(serve('../client/build', { maxage, defer: false }))
+app.use(serve({rootDir: '../client/build'}))
 routes(app, config)
 
 app.listen(port)
