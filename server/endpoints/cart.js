@@ -38,8 +38,13 @@ const totals = async function (ctx) {
     items[id]     = { total, savings }
   })
 
+
   ctx.status = 200
-  ctx.body = { items, order: round(orderTotal), savings: round(savingsTotal) }
+  ctx.body = {
+    items,
+    order:   round(orderTotal),
+    savings: round(savingsTotal)
+  }
 }
 
 

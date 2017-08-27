@@ -11,7 +11,7 @@ exports.login = async function (ctx) {
     user,
     message: `Welcome ${user.profile.name}`
   }
-  console.log({res})
+
   if (user) {
     ctx.status = 200
     ctx.body = res

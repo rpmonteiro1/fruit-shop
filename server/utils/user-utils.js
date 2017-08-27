@@ -1,6 +1,8 @@
 'use strict'
 
 const bcrypt = require('bcryptjs')
+const jwt    = require('jsonwebtoken')
+const config = require('../config/settings')
 
 const encryptPassword = function (password) {
   return new Promise(function (resolve, reject) {
@@ -51,9 +53,18 @@ const createKey = function (timestamp, num = 0) {
 }
 
 
+const createJWT = function (profile) {
+  return jwt.sign(
+    {id: profile.id},
+    config.jwtSecret,
+    {expiresIn: config.jwtExpiry}
+  )
+}
+
 module.exports = {
   encryptPassword,
   validatePassword,
   validatePasswordFormat,
-  createKey
+  createKey,
+  createJWT
 }

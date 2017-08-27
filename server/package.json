@@ -1,12 +1,13 @@
 {
-  "name": "amz-fba-sv",
+  "name": "ric-fruit-shop",
   "version": "2.0.0",
   "main": "index.js",
   "repository": "https://rpmonteiro@github.com/rpmonteiro/shopping-cart-r3pi.git",
   "author": "rpmonteiro <ricpmonteiro@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "clear && nodemon --inspect --debug server.js"
+    "start": "clear && nodemon --inspect --debug server.js",
+    "test": "mocha -t 10000 --opts mocha.opts"
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
@@ -44,7 +45,6 @@
     "jsonfile": "3.0.0",
     "mocha": "3.4.2",
     "nodemon": "^1.11.0",
-    "prompt": "^1.0.0",
     "supertest": "3.0.0"
   },
   "engines": {

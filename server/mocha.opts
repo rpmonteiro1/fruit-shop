@@ -1,0 +1,2 @@
+--reporter dot
+./__tests__/*.js
