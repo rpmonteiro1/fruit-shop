@@ -9,9 +9,6 @@
     "heroku-postbuild": "cd client && yarn && yarn build && cd ../server && yarn && DATABASE_URL=$DATABASE_URL db-migrate up",
     "deploy": ""
   },
-  "dependencies": {
-    "db-migrate": "0.10.0-beta.20"
-  },
   "engines": {
     "node": "8.1.2",
     "yarn": "0.24.5"

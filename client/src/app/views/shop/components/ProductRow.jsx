@@ -2,6 +2,7 @@ import React        from 'react'
 import PropTypes    from 'prop-types'
 import settings     from '../../../config/settings'
 import Line         from '../../../ui/line/Line'
+import Slider       from '../../../ui/slider/Slider'
 import AddToCartHOC from '../../cart/components/AddToCartHOC'
 
 const currency  = settings.currency
@@ -42,9 +43,7 @@ export function ProductRow({product}) {
 
   return (
     <div className="product-row">
-      <div className="slider">
-        <img src={product.getIn(['images', 0])} alt={pTitle} />
-      </div>
+      <Slider images={product.get('images')} />
       <div className="details">
         {title}
         {description}

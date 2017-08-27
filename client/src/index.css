@@ -3,6 +3,7 @@
 @import "./app/views/cart/Cart.css";
 @import "./app/ui/flash/Flash.css";
 @import "./app/ui/table/Table.css";
+@import "./app/ui/slider/Slider.css";
 @import "./app/views/user/User.css";
 @import "./app/styles/base.css";
 @import "./app/styles/buttons.css";

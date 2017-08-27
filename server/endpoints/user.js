@@ -11,7 +11,7 @@ async function user(ctx) {
   const userBody = setupUserBody(user)
 
   if (user) {
-    ctx.body = { user: userBody, message: `Welcome ${user.name}` }
+    ctx.body = { user: userBody, message: `Welcome back ${user.name}` }
     ctx.response.message = 'Test123'
     ctx.status = 200
   } else {

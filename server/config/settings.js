@@ -10,7 +10,7 @@ const config = {
     database: process.env.DATABASE_URL || dbConfig.dev.database
   },
   app: {
-    port: process.env.PORT || 9010
+    port: process.env.PORT || 8080
   },
   jwtSecret: process.env.JWT_SECRET || 'Uh.. this is a fruit shop!',
   jwtExpiry: 60 * 60 * 24 * 7 // 7 days expiry defined in seconds

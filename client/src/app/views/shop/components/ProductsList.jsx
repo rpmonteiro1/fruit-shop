@@ -1,26 +1,20 @@
-import React, { PureComponent } from 'react'
-import PropTypes                from 'prop-types'
-import ProductRow               from './ProductRow'
+import React      from 'react'
+import PropTypes  from 'prop-types'
+import ProductRow from './ProductRow'
 
 
-export default class ProductsList extends PureComponent {
+ProductsList.propTypes = {
+  products: PropTypes.object.isRequired
+}
 
-  static propTypes = {
-    products: PropTypes.object.isRequired
-  }
+export default function ProductsList({products}) {
+  const productRows = products.map((p, idx) => {
+    return <ProductRow key={`p-${idx}`} id={p.get('id')} product={p} />
+  })
 
-  render() {
-    const { products } = this.props
-
-    const productRows = products.map((p, idx) => {
-      return <ProductRow key={`p-${idx}`} id={p.get('id')} product={p} />
-    })
-
-    return (
-      <div className="products-list">
-        {productRows}
-      </div>
-    )
-  }
-
+  return (
+    <div className="products-list">
+      {productRows}
+    </div>
+  )
 }

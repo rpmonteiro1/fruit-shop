@@ -1,0 +1,33 @@
+.slider {
+  position: relative;
+  max-height: 200px;
+  width: 30%;
+}
+
+.slider .loading {
+  position: absolute;
+  top: calc(50% - 9px);
+  left: calc(50% + 9px);
+  width: 18px;
+  height: 18px;
+}
+
+.slider button {
+  position: absolute;
+  top: calc(50% - 10px);
+  height: 20px;
+  padding: 0;
+  background: rgba(255, 180, 96, 0.4);
+}
+
+.slider button > i {
+  font-size: 18px;
+}
+
+.slider button:first-child {
+  left: -10px;
+}
+
+.slider button:last-child {
+  right: -10px;
+}

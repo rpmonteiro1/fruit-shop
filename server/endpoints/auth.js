@@ -6,9 +6,13 @@ const validatePassword = require('../utils/user-utils').validatePassword
 const createKey        = require('../utils/user-utils').createKey
 
 exports.login = async function (ctx) {
-  const res = await doLogin(ctx.db, ctx.request.body)
-
-  if (res) {
+  const user = await doLogin(ctx.db, ctx.request.body)
+  const res  = {
+    user,
+    message: `Welcome ${user.profile.name}`
+  }
+  console.log({res})
+  if (user) {
     ctx.status = 200
     ctx.body = res
   } else {
