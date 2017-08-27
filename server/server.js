@@ -1,6 +1,5 @@
 'use strict'
 
-const path         = require('path')
 const Koa          = require('koa')
 const app          = module.exports = new Koa()
 const responseTime = require('koa-response-time')
@@ -42,9 +41,7 @@ process.on('unhandledRejection', reason => {
   console.log('Unhandled promise rejection: ' + reason)
 })
 
-console.log(__dirname)
-console.log(path.resolve('../client/build'))
-app.use(serve(path.resolve('../client/build'), { maxage, defer: false }))
+app.use(serve('../client/build', { maxage, defer: false }))
 routes(app, config)
 
 app.listen(port)
