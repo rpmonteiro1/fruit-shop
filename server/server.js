@@ -36,7 +36,7 @@ if (config.env === 'production') {
 
 app.use(helmet())
 app.use(errorHandler())
-app.use(compress())
+// app.use(compress())
 
 process.on('unhandledRejection', reason => {
   console.log('Unhandled promise rejection: ' + reason)
