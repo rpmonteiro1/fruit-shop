@@ -20,7 +20,7 @@ export default function reducer(state = initialState, action = {}) {
 
     case UPDATE_CART: {
       const { id, value } = action.data
-      return state.setIn(['items', id], value)
+      return state.setIn(['items', id.toString()], value)
     }
 
     case TOTALS_REQUEST:
@@ -38,7 +38,7 @@ export default function reducer(state = initialState, action = {}) {
 
 
     case DELETE_CART_ITEM:
-      return state.deleteIn(['items', action.data])
+      return state.deleteIn(['items', action.data.toString()])
 
     default:
       return state
