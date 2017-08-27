@@ -42,6 +42,8 @@ process.on('unhandledRejection', reason => {
   console.log('Unhandled promise rejection: ' + reason)
 })
 
+console.log(__dirname)
+console.log(path.resolve('../client/build'))
 app.use(serve(path.resolve('../client/build'), { maxage, defer: false }))
 routes(app, config)
 
