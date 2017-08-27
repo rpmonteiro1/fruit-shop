@@ -92,7 +92,7 @@ export class Cart extends PureComponent {
       view = <div className="empty-cart">Your cart is empty</div>
     } else {
       const cartItems = products
-        .filter(p => cart.get(p.get('id')) !== undefined)
+        .filter(p => cart.get(p.get('id').toString()) !== undefined)
         .map(p => {
           const id = p.get('id')
           return Map({

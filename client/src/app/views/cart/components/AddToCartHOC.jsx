@@ -34,8 +34,8 @@ export default function AddToCartHOC(Product) {
 
     populateState = (props = this.props) => {
       const { id, items } = props
-      const count = items.get(id)
-
+      const count = items.get(`${id}`)
+      
       this.setState({
         active: count > 0 ? true : false,
         count:  count || 0
@@ -49,7 +49,7 @@ export default function AddToCartHOC(Product) {
 
       const { add } = e.target.dataset
       const value   = add ? count + 1 : count - 1
-      
+
       dispatch(updateCart(id, value))
     }
 

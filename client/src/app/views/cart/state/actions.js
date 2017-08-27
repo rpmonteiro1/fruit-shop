@@ -6,8 +6,8 @@ export const TOTALS_REQUEST   = 'TOTALS_REQUEST'
 export const TOTALS_SUCCESS   = 'TOTALS_SUCCESS'
 export const TOTALS_FAILURE   = 'TOTALS_FAILURE'
 
-export const updateCart     = (id, v) => action(UPDATE_CART, {id: parseInt(id), value: v})
-export const deleteCartItem = id      => action(DELETE_CART_ITEM, parseInt(id))
+export const updateCart     = (id, v) => action(UPDATE_CART, {id, value: v})
+export const deleteCartItem = id      => action(DELETE_CART_ITEM, id)
 export const totalsRequest  = ()      => action(TOTALS_REQUEST)
 export const totalsSuccess  = data    => action(TOTALS_SUCCESS, data)
 export const totalsFailure  = err     => action(TOTALS_FAILURE, err)
