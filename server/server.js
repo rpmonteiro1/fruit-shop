@@ -14,7 +14,6 @@ const enforceHttps = require('koa-sslify')
 const config       = require('./config/settings')
 const routes       = require('./config/routes')
 const database     = require('./config/database')
-const serveAlt        = require('koa-static-server')
 
 const env          = process.env.NODE_ENV
 const port         = process.env.PORT || 8080
@@ -35,18 +34,15 @@ if (config.env === 'production') {
 }
 
 app.use(helmet())
-app.use(errorHandler({
-  env: 'development'
-}))
-// app.use(compress())
+app.use(errorHandler({env: 'development'}))
+app.use(compress())
 
 process.on('unhandledRejection', reason => {
   console.log('Unhandled promise rejection: ' + reason)
 })
 
 // publicRoutes(app)
-// app.use(serve('../client/build', { maxage, defer: false }))
-app.use(serveAlt({rootDir: './client/build'}))
+app.use(serve('./client/build', { maxage, defer: false }))
 routes(app, config)
 
 app.listen(port)
