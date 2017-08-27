@@ -29,7 +29,7 @@ export const autoLoginUser = () => {
   const token = getCookie(settings.jwtKey)
 
   if (!token) {
-    return
+    return loginFailure({status: 'No valid token found'})
   }
 
   return thunk({
