@@ -14,8 +14,11 @@ export default class Image extends PureComponent {
   }
 
 
-  componentWillReceiveProps() {
-    this.setState({loading: true})
+  componentWillReceiveProps(nextProps) {
+    const newImage = this.props.url !== nextProps.url
+    if (newImage) {
+      this.setState({loading: true})
+    }
   }
 
 

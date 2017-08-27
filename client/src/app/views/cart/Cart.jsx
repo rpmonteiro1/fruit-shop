@@ -101,7 +101,7 @@ export class Cart extends PureComponent {
             image:   p.getIn(['images', 0]),
             title:   p.get('title'),
             price:   p.get('price'),
-            qty:     cart.get(id),
+            qty:     cart.get(id.toString()),
             savings: totals.getIn(['items', id.toString(), 'savings']) || 0,
             total:   totals.getIn(['items', id.toString(), 'total'])
           })
