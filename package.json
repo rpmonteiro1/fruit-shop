@@ -4,13 +4,17 @@
   "main": "index.js",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "",
-    "heroku-prebuild": "",
+    "setup": "concurrently \"createdb rics-fruit-shop && cd server && yarn && db-migrate up\" \"cd client && yarn\" && yarn start",
+    "start": "concurrently \"cd server && yarn start\"  \"cd client && yarn start\"",
+    "test": "concurrently \"cd server && yarn test\" \"cd client && yarn test\"",
     "heroku-postbuild": "cd client && yarn && yarn build && cd ../server && yarn && DATABASE_URL=$DATABASE_URL db-migrate up",
     "deploy": ""
   },
   "engines": {
     "node": "8.1.2",
     "yarn": "0.24.5"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
   }
 }

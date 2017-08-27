@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    "transform-runtime"
+  ],
+  "presets": [
+    "flow",
+    "env",
+    "stage-0",
+    "react"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-inline-elements"
+      ]
+    },
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    }
+  }
+}
