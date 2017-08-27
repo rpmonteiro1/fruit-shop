@@ -13,6 +13,7 @@ const compress     = require('koa-compress')
 const enforceHttps = require('koa-sslify')
 const config       = require('./config/settings')
 const routes       = require('./config/routes')
+const publicRoutes = require('./config/public-routes')
 const database     = require('./config/database')
 
 const env          = process.env.NODE_ENV
@@ -42,6 +43,7 @@ process.on('unhandledRejection', reason => {
 })
 
 app.use(serve('../client/build', { maxage, defer: false }))
+publicRoutes(app)
 routes(app, config)
 
 app.listen(port)

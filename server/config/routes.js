@@ -10,14 +10,14 @@ const products = require('../endpoints/products')
 
 module.exports = function (app, config) {
   // custom 404 response for anything that isn't a protected resource
-  // app.use(async (ctx, next) => {
-  //   if (ctx.url.match(/^\/api/)) {
-  //     await next()
-  //   } else {
-  //     ctx.status = 404
-  //     ctx.body = 'Not found\n'
-  //   }
-  // })
+  app.use(async (ctx, next) => {
+    if (ctx.url.match(/^\/api/)) {
+      await next()
+    } else {
+      ctx.status = 404
+      ctx.body = 'Not found\n'
+    }
+  })
 
   // custom 401 error page
   app.use(async (ctx, next) => {
