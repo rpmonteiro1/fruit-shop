@@ -3,6 +3,10 @@
 #### Live app
 https://fruit-shop.herokuapp.com
 
+#### Login details:
+Email: r3pi@solera.com
+Password: solera
+
 #### Instructions
 Make sure you have Postgres installed and running on your machine.
 
