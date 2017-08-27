@@ -1,5 +1,6 @@
 'use strict'
 
+const path         = require('path')
 const Koa          = require('koa')
 const app          = module.exports = new Koa()
 const responseTime = require('koa-response-time')
@@ -41,28 +42,8 @@ process.on('unhandledRejection', reason => {
   console.log('Unhandled promise rejection: ' + reason)
 })
 
-app.use(serve(__dirname + '../client/build', { maxage, defer: false }))
+app.use(serve(path.resolve('../client/build'), { maxage, defer: false }))
 routes(app, config)
 
 app.listen(port)
 console.log(`Server listening on port: ${port} in ${config.env} mode`)
-
-
-// // core libs
-// const Koa = require('koa')
-// const app = module.exports = new Koa()
-//
-// // setup
-// const config = require('./config/settings')
-// require('./config/koa')(app, config)
-// require('./config/routes')(app, config)
-//
-// // start server
-// if (!module.parent) {
-//   // normal mode
-//   app.listen(config.app.port)
-//   console.log(`Server started on port: ${config.app.port} in ${config.env} mode`)
-// } else {
-//   // testing mode
-//   console.log(`Server running in  ${config.env} mode`)
-// }

@@ -3,6 +3,7 @@ import { connect }              from 'react-redux'
 import PropTypes                from 'prop-types'
 import settings                 from '../../config/settings'
 import { Map }                  from 'immutable'
+import Helmet                   from 'react-helmet'
 import TableList                from '../../ui/table/TableList'
 import {
   deleteCartItem,
@@ -132,6 +133,7 @@ export class Cart extends PureComponent {
 
       view = (
         <div className="cart-view">
+          <Helmet title="Cart" />
           <TableList
             items={cartItems}
             className="cart-items-list"

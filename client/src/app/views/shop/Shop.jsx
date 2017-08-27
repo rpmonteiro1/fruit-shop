@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect }          from 'react-redux'
 import PropTypes            from 'prop-types'
 import ProductsList         from './components/ProductsList'
+import Helmet               from 'react-helmet'
 import { getProducts }      from './state/shop-redux'
 
 
@@ -26,6 +27,7 @@ export class Shop extends Component {
 
     return (
       <section className="shop">
+        <Helmet title="Shop" />
         <h2>Fruits in stock</h2>
         <ProductsList products={products} />
       </section>
