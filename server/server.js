@@ -45,8 +45,8 @@ process.on('unhandledRejection', reason => {
 })
 
 // publicRoutes(app)
-app.use(serve('../client/build', { maxage, defer: false }))
-// app.use(serveAlt({rootDir: './build'}))
+// app.use(serve('../client/build', { maxage, defer: false }))
+app.use(serveAlt({rootDir: './build'}))
 routes(app, config)
 
 app.listen(port)
