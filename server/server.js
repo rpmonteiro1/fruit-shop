@@ -35,7 +35,9 @@ if (config.env === 'production') {
 }
 
 app.use(helmet())
-app.use(errorHandler())
+app.use(errorHandler({
+  env: 'development'
+}))
 // app.use(compress())
 
 process.on('unhandledRejection', reason => {
@@ -43,8 +45,8 @@ process.on('unhandledRejection', reason => {
 })
 
 // publicRoutes(app)
-// app.use(serve('../client/build', { maxage, defer: false }))
-app.use(serveAlt({rootDir: '../client/build'}))
+app.use(serve('../client/build', { maxage, defer: false }))
+// app.use(serveAlt({rootDir: './build'}))
 routes(app, config)
 
 app.listen(port)
