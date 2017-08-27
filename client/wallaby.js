@@ -1,3 +1,7 @@
+/* Dev comments:
+  This wallaby 'thing' is a godsend when writing tests. If you want to give it a try, just install the Wallaby plugin for your IDE/Text editor, and give this a run. You'll be hooked in no time :-)
+*/
+
 module.exports = function (wallaby) {
   return {
     files: [

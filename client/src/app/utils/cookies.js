@@ -1,4 +1,6 @@
-
+/* Dev comments:
+  Boilerplate code to handle cookies. Nothing original here.
+*/
 
 // ref: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
 export function getCookie(key) {

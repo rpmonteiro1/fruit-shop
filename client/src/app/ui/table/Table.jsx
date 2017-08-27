@@ -1,3 +1,8 @@
+/* Dev comments:
+  Generic row rendering component. If there's a component to render -> render it. Otherwise just render the plain text value
+*/
+
+
 import React     from 'react'
 import PropTypes from 'prop-types'
 

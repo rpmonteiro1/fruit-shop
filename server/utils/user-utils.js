@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs')
 const jwt    = require('jsonwebtoken')
 const config = require('../config/settings')
 
+// thought to include it as that would be the next step in the app - account creation
 const encryptPassword = function (password) {
   return new Promise(function (resolve, reject) {
     bcrypt.genSalt(10, function (err1, salt) {
@@ -34,20 +35,6 @@ const validatePassword = function (password, hash) {
 }
 
 
-const validatePasswordFormat = function (password) {
-  const str = `${password}`.trim()
-
-  if (!str) {
-    return 'password required'
-  } else if (str.length < 6) {
-    return 'password must be at least 6 characters long'
-  } else {
-    // no errors
-    return ''
-  }
-}
-
-
 const createKey = function (timestamp, num = 0) {
   return ((timestamp ? new Date(timestamp).getTime() : Date.now()) + num).toString(36)
 }
@@ -64,7 +51,6 @@ const createJWT = function (profile) {
 module.exports = {
   encryptPassword,
   validatePassword,
-  validatePasswordFormat,
   createKey,
   createJWT
 }

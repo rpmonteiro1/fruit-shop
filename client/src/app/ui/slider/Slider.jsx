@@ -1,3 +1,7 @@
+/* Dev comments:
+  Next would be to add some fancy animations/transitions between images. All it has it a little loading spinner when loading images.
+*/
+
 import React, { Component } from 'react'
 import PropTypes            from 'prop-types'
 import Image                from './Image'

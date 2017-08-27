@@ -18,6 +18,7 @@ const totals = async function (ctx) {
 
   let orderTotal = 0, savingsTotal = 0
   const items = {}
+
   products.map(p => {
     const id          = p.id
     let qty           = parseInt(cart[id])

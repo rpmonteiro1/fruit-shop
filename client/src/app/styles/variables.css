@@ -12,25 +12,15 @@
   --button-padding-x: 1rem;
   --button-padding-y: 0.5rem;
   --button-rounding: 2px;
-  --caption-color: #FFC51D;
-  --condensed-font: "Avenir Next Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --darker-green: rgb(90, 173, 76);
-  --error-text-color: #DA000C;
   --field-active-color: #FFF;
-  --field-color: #FFF;
   --focus-color: #97BBFF;
   --font-size-base: 15px;
   --font-size-field: 0.88rem;
-  --font-size-huge: 2rem;        /* 30px */
-  --font-size-label: 0.88rem;
   --font-size-large: 1.6rem;     /* 24px */
   --font-size-larger: 1.2rem;    /* 18px */
-  --font-size-medium: 0.93rem;   /* 14px */
   --font-size-normal: 1rem;      /* 15px */
-  --font-size-small: 0.8rem;    /* 12px */
   --font-size-smaller: 0.8667rem;  /* 13px */
-  --font-size-tab: 0.8rem;
-  --font-size-tiny: 0.73rem;     /* 11px */
   --form-field-bg-color: #EEE;
   --form-field-color: #222;
   --form-field-font-family: inherit;
@@ -42,37 +32,16 @@
   /* forms */
   --form-padding: 20px;
   --form-spacing: 10px;
-  /*--header-bg-color: #F1E6D0;*/
-  --header-bg-color: hsl(40, 40%, 85%);
-  --header-color: #7B6F4C;
-  --highlight-color: #FFD525;
-  --image-width: 200px;
   --light-green: rgb(237, 247, 229);
   --light-red: rgb(255, 50, 50);
-  --link-color-active: color(var(--link-color) shade(80%));
-  --link-color-active-bg: color(#C27D3D a(0.3));
-  --link-color-hover: #BA0002;
   --main-margin: 4rem;
   /* body */
-  --menu-height: 4rem;
-  --menu-link-active-color: rgba(0, 0, 0, 0.9);
-  --menu-link-color: rgba(0, 0, 0, 0.7);
-  --nested-bg-color: #E8E3D9;
-  --panel-bg-color: hsl(0, 0%, 95%);
-  --paper-size: 512px 256px;
-  --primary-action-active-color: color(var(--primary-action-color) shade(50%));
-  --primary-action-color: var(--focus-color);
-  --primary-action-hover-color: color(var(--primary-action-color) tint(20%));
   --primary-color: #73388B;
   --primary-color-active: color(var(--primary-color) shade(30%));
   --primary-color-hover: color(var(--primary-color) tint(20%));
-  --quotebox-bg-color: #E6D9C0;
   --red: #DA000C;
   /* typography */
   --secondary-color: #948C81;
-  --sub-menu-color: hsl(44, 52%, 97%);
   /* colours */
   --text-color: #111;
-  --text-color-fade: #444;
-  --warning-bg-color: #DA000C;
 }

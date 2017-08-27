@@ -81,7 +81,6 @@ input:hover {
 
 input:active,
 input:focus {
-  /*box-shadow: 0 0 0 1px color(var(--highlight-color) a(0.9));*/
   border: 1px solid var(--focus-color);
   background-color: var(--field-active-color);
   color: color(var(--form-field-color) l(0%));

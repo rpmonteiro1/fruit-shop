@@ -24,7 +24,11 @@ export const login = (data = {}) => thunk({
   onSuccess: loginSuccess
 })
 
-
+/* Dev comments:
+  Not a very neat way. I shouldn't be dispatching failure actions if the app couldn't autologin (something that it tries to do every time).
+  Only left it like this, so that I can use the thunk wrapper, to make the code nice and neat.
+  A better approach would be required for a more robust app.
+*/
 export const autoLoginUser = () => {
   const token = getCookie(settings.jwtKey)
 

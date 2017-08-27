@@ -1,3 +1,7 @@
+/* Dev comments:
+  Sometimes I just combine action-types, actions and the reducer in one file if there's not a lot of code to facilitate mental mapping and comprehension. It all depends on which conventions the team abides by. It could also be split into its own little files. 
+*/
+
 import { action, thunk } from '../../../utils/redux-helpers'
 import { fromJS }        from 'immutable'
 

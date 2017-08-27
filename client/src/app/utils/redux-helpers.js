@@ -1,3 +1,7 @@
+/* Dev comments:
+  Some tiny helpers to help with the Boilerplate that comes with Redux. This thunk helpers is pretty limited, because in more complicated apps we usually need to do some logic before communicating with the server. But for the fruit shop, it's all pretty straightforward api calls.
+*/
+
 import fetch                          from 'isomorphic-fetch'
 import settings                       from '../config/settings'
 import { checkHttpStatus, parseJSON } from './helpers'

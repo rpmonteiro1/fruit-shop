@@ -1,3 +1,7 @@
+/* Dev comments:
+  HOC that allows you access into the app if you're authenticated.
+*/
+
 import React               from 'react'
 import PropTypes           from 'prop-types'
 import { Redirect, Route } from 'react-router-dom'

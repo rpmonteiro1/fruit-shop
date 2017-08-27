@@ -33,7 +33,6 @@ export function AppBody() {
           <Route exact path="/" render={() => <Redirect to="/shop"/>}/>
           <Route exact path="/shop" component={Shop} />
           <Route exact path="/cart" component={Cart} />
-          {/* <Route exact path="/orders/edit/:id" component={Checkout} /> */}
         </div>
       </div>
     </Transition>
@@ -41,7 +40,6 @@ export function AppBody() {
 }
 
 export default withRouter(AppBody)
-
 
 
 function Header() {

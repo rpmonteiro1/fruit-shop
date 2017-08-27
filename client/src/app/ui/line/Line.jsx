@@ -1,3 +1,7 @@
+/* Dev comments:
+  Could be expanded to be much more customisable.
+*/
+
 import React, { PureComponent } from 'react'
 import PropTypes                from 'prop-types'
 

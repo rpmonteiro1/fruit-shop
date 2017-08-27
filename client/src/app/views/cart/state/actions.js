@@ -1,3 +1,7 @@
+/* Dev comments:
+  With those redux helpers, it sometimes makes for some easy-on-the-eyes code :-)
+*/
+
 import { action, thunk } from '../../../utils/redux-helpers'
 
 export const UPDATE_CART      = 'UPDATE_CART'

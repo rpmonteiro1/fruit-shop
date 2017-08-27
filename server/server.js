@@ -41,7 +41,7 @@ process.on('unhandledRejection', reason => {
   console.log('Unhandled promise rejection: ' + reason)
 })
 
-// publicRoutes(app)
+// gotcha: heroku has the root dir different from the local environment!
 app.use(serve('./client/build', { maxage, defer: false }))
 routes(app, config)
 

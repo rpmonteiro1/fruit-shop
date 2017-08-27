@@ -1,3 +1,7 @@
+/* Dev comments:
+  My idea for this HOC is that sometimes in an e-commerce shop you might want to allow the users to add items to a cart from varied places eg. a Modal window, or a special promotion popup. With this HOC, you can simply wrap any items that can be added into the cart, and it automagically takes care of the implementation for that. The only thing it needs is a valid ID. If the fruit store was to be developed further, this would probably be an important piece of the app.
+*/
+
 import React, { PureComponent } from 'react'
 import PropTypes                from 'prop-types'
 import { connect }              from 'react-redux'
@@ -35,7 +39,7 @@ export default function AddToCartHOC(Product) {
     populateState = (props = this.props) => {
       const { id, items } = props
       const count = items.get(`${id}`)
-      
+
       this.setState({
         active: count > 0 ? true : false,
         count:  count || 0

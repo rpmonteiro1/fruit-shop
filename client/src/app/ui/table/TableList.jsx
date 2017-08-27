@@ -1,3 +1,11 @@
+/* Dev comments:
+  Didn't feel right to hardcode values and columns for the fruit shop.
+  Instead, this component dinamically generates everything based on the columns/row data passed.
+  This way, any cell can have any component rendered in it, with the parent handling all onChanges.
+
+  So far, I only had the need to include either an image or input component in the cells, but can easily be expanded to just about anything with minimal effort.
+*/
+
 import React, { PureComponent } from 'react'
 import PropTypes                from 'prop-types'
 import Table                    from './Table'

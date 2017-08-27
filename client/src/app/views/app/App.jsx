@@ -1,3 +1,7 @@
+/* Dev comments:
+  The 'gate' of the app. It saves the original URL you came in with, and if the login is successful, it then redirects you to it after.
+*/
+
 import React, { Component }            from 'react'
 import PropTypes                       from 'prop-types'
 import { Provider }                    from 'react-redux'
