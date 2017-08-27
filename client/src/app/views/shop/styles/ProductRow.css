@@ -1,10 +1,10 @@
 .shop-row {
-  max-width: 45vw;
+  width: 45vw;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .shop-row {
-    max-width: 85vw;
+    width: 85vw;
   }
 
   .product-row img {
@@ -53,8 +53,9 @@
 }
 
 .product-row img {
-  max-height: var(--image-width);
-  width: var(--image-width);
+  max-width: 100%;
+  max-width: 100%;
+  width: auto;
   height: auto;
 }
 

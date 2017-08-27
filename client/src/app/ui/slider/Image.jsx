@@ -44,7 +44,7 @@ export default class Image extends PureComponent {
     }
 
     return (
-      <div>
+      <div className="image-container">
         <img alt="" src={url} onLoad={this.loaded} onError={this.loadError} />
         {spinner}
         {errorMsg}

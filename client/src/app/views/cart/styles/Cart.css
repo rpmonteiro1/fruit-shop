@@ -16,7 +16,7 @@
   max-width: 45vw;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .cart-items-list {
     max-width: 80vw;
   }

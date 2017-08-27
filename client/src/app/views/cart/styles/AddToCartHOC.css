@@ -1,6 +1,6 @@
 .cart-widget {
   padding-top: 1rem;
-  padding-left: calc(var(--image-width) + 1rem);
+  padding-left: calc(30% + 1rem);
 }
 
 .cart-item-count {
