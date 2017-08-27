@@ -1,7 +1,7 @@
 ## Ric's fruit shop
 
 #### Live app
-https://fruit-shop.herokuapp.com
+https://fruit-shop.herokuapp.com (only works on Google Chrome for now. I'll update this README when I fix it - just needs a polyfill. Sorry)
 
 #### Login details:
 Email: r3pi@solera.com
